@@ -40,8 +40,7 @@ public class NewsOneFragment extends Fragment {
     TextView text;
     @BindView(R.id.news_one_photo)
     ImageView photo;
-    @BindView(R.id.news_one_mask)
-    ImageView mask;
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -68,17 +67,13 @@ public class NewsOneFragment extends Fragment {
         return view;
     }
     private void init(){
-        float screenHeight = getScreenHeight();
-
-        photo   .getLayoutParams().height = (int)(screenHeight/2.5);
-        mask    .getLayoutParams().height = (int)(screenHeight/2.45);
 
         if(newsOneObj.description != null) {
             text.setText(newsOneObj.description);
         }
 
         if(newsOneObj.publishedAt != null){
-            date.setText(newsOneObj.publishedAt.substring(0,10));
+            date.setText(newsOneObj.publishedAt);
         }
 
         if(newsOneObj.title != null){
@@ -94,16 +89,7 @@ public class NewsOneFragment extends Fragment {
         }
     }
 
-    private float getScreenHeight(){
 
-        Display     display = getActivity().getWindowManager().getDefaultDisplay();
-        Point       size    = new Point();
-        Resources   r       = getResources();
-
-        display.getSize(size);
-        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, size.y, r.getDisplayMetrics());
-
-    }
 
 
 }

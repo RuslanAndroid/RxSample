@@ -3,12 +3,15 @@ package ru.ruslankhusaenov.supercool.fragments.news;
 
 
 
+import ru.ruslankhusaenov.supercool.R;
+import ru.ruslankhusaenov.supercool.models.NewsItem;
 import ru.ruslankhusaenov.supercool.repository.DomainService;
 import ru.ruslankhusaenov.supercool.util.NetworkError;
 import rx.Observable;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 
+import rx.functions.Func1;
 import rx.subscriptions.CompositeSubscription;
 
 
@@ -33,16 +36,7 @@ public class NewsPresenter {
         Subscription subscription = service
                 .getRecentNews()
                 .flatMap(Observable::from)
-                .map(newsItem -> {
-
-                    if(newsItem.publishedAt != null){
-                        newsItem.publishedAt = newsItem.publishedAt.substring(0,10);
-                    }else{
-                        newsItem.publishedAt = no_date;
-                    }
-
-                    return newsItem;
-                })
+                .map(this::setDate)
                 .toList()
                 .observeOn(AndroidSchedulers.mainThread(), true)
                 .subscribe(
@@ -61,6 +55,15 @@ public class NewsPresenter {
 
     public void onStop() {
         subscriptions.unsubscribe();
+    }
+
+    private NewsItem setDate(NewsItem item){
+        if(item.publishedAt != null){
+            item.publishedAt = item.publishedAt.substring(0,10);
+        }else{
+            item.publishedAt = no_date;
+        }
+        return item;
     }
 
 }
