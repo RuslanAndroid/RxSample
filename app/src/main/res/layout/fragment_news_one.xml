@@ -9,54 +9,9 @@
                 android:layout_height="match_parent">
 
 
-    <android.support.v7.widget.Toolbar
-        app:contentInsetLeft="0dp"
-        app:contentInsetStart="0dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/greyChooseBack"
-        app:layout_scrollFlags="scroll|snap"
-
-        android:id="@+id/toolbar_news">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:id="@+id/rel_toolbar">
-                <RelativeLayout
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:id="@+id/img_back"
-                    >
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        app:srcCompat="@drawable/back_ic"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="16dp"/>
-                </RelativeLayout>
-                <TextView
-                    android:text="@string/news_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:textColor="@color/black"
-                    android:id="@+id/textView16"
-                    android:textSize="16dp"/>
-
-            </RelativeLayout>
-
-
-        </RelativeLayout>
-    </android.support.v7.widget.Toolbar>
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar_news">
+        android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
