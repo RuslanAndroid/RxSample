@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import java.util.ArrayList;
+import java.util.List;
 
 import ru.ruslankhusaenov.supercool.R;
 import ru.ruslankhusaenov.supercool.models.NewsItem;
@@ -20,7 +20,7 @@ import ru.ruslankhusaenov.supercool.models.NewsItem;
 
 public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHolder> {
 
-    ArrayList<NewsItem> rows;
+    List<NewsItem> rows;
     NewsListAdapter.ItemclickListener mListener;
 
     Context mContext;
@@ -36,12 +36,12 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHo
         void onClick(View view, int position);
     }
 
-    public void setInfo(ArrayList<NewsItem> rows) {
+    public void setInfo(List<NewsItem> rows) {
         this.rows = rows;
         notifyDataSetChanged();
     }
 
-    public void addInfo(ArrayList<NewsItem> rows) {
+    public void addInfo(List<NewsItem> rows) {
         this.rows.addAll(rows);
         notifyDataSetChanged();
     }
@@ -49,8 +49,7 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHo
     @Override
     public NewsListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_list_item, parent, false);
-        NewsListAdapter.ViewHolder vh = new NewsListAdapter.ViewHolder(v);
-        return vh;
+        return new ViewHolder(v);
     }
 
     public NewsItem getItem(int position) {
@@ -59,14 +58,18 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(NewsListAdapter.ViewHolder holder, int position) {
+
         if( getItem(position).publishedAt != null){
 
-            holder.date.setText(getItem(position).publishedAt.substring(0,10));
+            holder.date.setText(getItem(position).publishedAt);
 
         }
 
+        if( getItem(position).title != null){
 
-        holder.title.setText(getItem(position).title);
+            holder.title.setText(getItem(position).title);
+
+        }
 
         holder.setClickListener(mListener);
     }

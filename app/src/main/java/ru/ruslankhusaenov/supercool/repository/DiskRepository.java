@@ -36,16 +36,13 @@ public class DiskRepository {
     @Singleton
     @RxLogObservable
     public Observable<NewsList> getRecentNews(final String key) {
-        return Observable.fromCallable(new Callable<NewsList>() {
-            @Override
-            public NewsList call() throws Exception {
-                String sharedPreferencesString = sharedPreferences.getString(key, "");
-                NewsList news = null;
-                if (!TextUtils.isEmpty(sharedPreferencesString)) {
-                    news =mGson.fromJson(sharedPreferencesString, NewsList.class);
-                }
-                return news;
+        return Observable.fromCallable(() -> {
+            String sharedPreferencesString = sharedPreferences.getString(key, "");
+            NewsList news = null;
+            if (!TextUtils.isEmpty(sharedPreferencesString)) {
+                news =mGson.fromJson(sharedPreferencesString, NewsList.class);
             }
+            return news;
         });
     }
 

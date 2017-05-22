@@ -6,6 +6,7 @@ import com.fernandocejas.frodo.annotation.RxLogObservable;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 import ru.ruslankhusaenov.supercool.models.NewsItem;
 import ru.ruslankhusaenov.supercool.models.NewsList;
@@ -28,22 +29,11 @@ public class DomainService {
         mDiskRepository = new DiskRepository(context); // TODO: Inject Singleton
     }
 
-
     @RxLogObservable
-    public Observable<ArrayList<NewsItem>> getRecentNews() {
+    public Observable<List<NewsItem>> getRecentNews() {
         return getMergedNews()
-                .filter(new Func1<NewsList, Boolean>() {
-                    @Override
-                    public Boolean call(NewsList response) {
-                        return response != null;
-                    }
-                })
-                .map(new Func1<NewsList, ArrayList<NewsItem>>() {
-                    @Override
-                    public ArrayList<NewsItem> call(NewsList response) {
-                        return response.mNewsItems;
-                    }
-                });
+                .filter(response -> response != null)
+                .map(response -> response.mNewsItems);
     }
 
     @RxLogObservable
@@ -51,20 +41,10 @@ public class DomainService {
         return Observable.mergeDelayError(
                 mDiskRepository.getRecentNews(NEWS_LIST_KEY).subscribeOn(Schedulers.io()),
                 mAPI.getNewsList()
-                        .filter(new Func1<NewsList, Boolean>() {
-                            @Override
-                            public Boolean call(NewsList response) {
-                                return response != null;
-                            }
-                        })
-                        .doOnNext(new Action1<NewsList>() {
-                    @Override
-                    public void call(NewsList newsList) {
-                        mDiskRepository.saveResponse(newsList,NEWS_LIST_KEY);
-                    }
-                }).subscribeOn(Schedulers.io())
+                        .filter(response -> response != null)
+                        .doOnNext(newsList -> mDiskRepository.saveResponse(newsList,NEWS_LIST_KEY))
+                        .subscribeOn(Schedulers.io())
         );
     }
-
 
 }

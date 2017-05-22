@@ -2,6 +2,7 @@ package ru.ruslankhusaenov.supercool.fragments.news;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 import ru.ruslankhusaenov.supercool.models.NewsItem;
 
@@ -16,8 +17,8 @@ public interface NewsView {
 
     void onFailure(String appErrorMessage);
 
-    void onLoad(ArrayList<NewsItem> cityListResponse);
+    void onLoad(List<NewsItem> cityListResponse);
 
-    void onLoadMore(ArrayList<NewsItem> cityListResponse);
+    void onLoadMore(List<NewsItem> cityListResponse);
 
 }

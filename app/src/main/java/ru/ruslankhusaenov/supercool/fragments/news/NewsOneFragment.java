@@ -84,12 +84,14 @@ public class NewsOneFragment extends Fragment {
         if(newsOneObj.title != null){
             title.setText(newsOneObj.title);
         }
+        if(newsOneObj.urlToImage != null) {
 
-        Picasso.with(getActivity())
-                .load(newsOneObj.urlToImage)
-                .fit()
-                .centerCrop()
-                .into(photo);
+            Picasso.with(getActivity())
+                    .load(newsOneObj.urlToImage)
+                    .fit()
+                    .centerCrop()
+                    .into(photo);
+        }
     }
 
     private float getScreenHeight(){

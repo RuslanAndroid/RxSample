@@ -1,4 +1,4 @@
-package ru.ruslankhusaenov.supercool.repository;
+package ru.ruslankhusaenov.supercool.util;
 
 import android.text.TextUtils;
 
@@ -21,6 +21,7 @@ public class NetworkError extends Throwable {
 
     public NetworkError(Throwable e) {
         super(e);
+        e.printStackTrace();
         this.error = e;
     }
     public String getMessage() {

@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -35,7 +36,7 @@ import ru.ruslankhusaenov.supercool.repository.DomainService;
  */
 
 public class NewsListFragment extends Fragment implements NewsView {
-    public static final String  TAG     = "fragment_app_product_item_comments_list";
+    public static final String  TAG     = "NewsListFragment";
     public static final int     LAYOUT  = R.layout.fragment_news_list;
 
     NewsPresenter       presenter;
@@ -83,12 +84,7 @@ public class NewsListFragment extends Fragment implements NewsView {
         list.setLayoutManager(new LinearLayoutManager(getActivity()));
         list.setAdapter(adapter);
 
-        adapter.setOnClickListener(new NewsListAdapter.ItemclickListener() {
-            @Override
-            public void onClick(View view, int position) {
-                openNews(adapter.getItem(position));
-            }
-        });
+        adapter.setOnClickListener((view, position) -> openNews(adapter.getItem(position)));
 
     }
 
@@ -128,12 +124,12 @@ public class NewsListFragment extends Fragment implements NewsView {
     }
 
     @Override
-    public void onLoad(ArrayList<NewsItem> cityListResponse) {
+    public void onLoad(List<NewsItem> cityListResponse) {
         adapter.setInfo(cityListResponse);
     }
 
     @Override
-    public void onLoadMore(ArrayList<NewsItem> cityListResponse) {
+    public void onLoadMore(List<NewsItem> cityListResponse) {
         adapter.addInfo(cityListResponse);
     }
 

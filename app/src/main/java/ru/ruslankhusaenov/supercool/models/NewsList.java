@@ -4,6 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Ruslan on 19.05.2017.
@@ -22,6 +23,6 @@ public class NewsList {
     public String sortBy;
     @SerializedName("articles")
     @Expose
-    public ArrayList<NewsItem> mNewsItems = null;
+    public List<NewsItem> mNewsItems = null;
 
 }
