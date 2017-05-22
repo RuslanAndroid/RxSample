@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="calendarColor">#bd9a5a</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="background">#efeff4</color>
+    <color name="blue">#2763f2</color>
+    <color name="blueBack">#007dc3</color>
+    <color name="darkBlue">#1240ae</color>
+    <color name="yellow">#f9eb59</color>
+    <color name="transparent">#80000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="greyLight">#c9c9c9</color>
+    <color name="warmBlue">#33b3ff</color>
+    <color name="grey">#999999</color>
+    <color name="greyBack">#f3f3f3</color>
+    <color name="greyLine2">#e3e3e5</color>
+    <color name="greyMan">#d8d8d8</color>
+    <color name="greyNewsText">#c7c7cc</color>
+    <color name="greyLine">#a6a6a6</color>
+    <color name="greyNews">#f0f0f0</color>
+    <color name="greyCalendar">#f5f5f5</color>
+    <color name="greyTestBack">#dedede</color>
+    <color name="greyTestTextview">#717070</color>
+    <color name="greyTextLight">#b0afae</color>
+    <color name="greyMapPlate">#fbfbfa</color>
+    <color name="greySwitchChecked">#e3e0e0</color>
+    <color name="greyQRButton">#9fa0a4</color>
+    <color name="greyCenterText">#7f7f7f</color>
+    <color name="greyCenterText2">#cccccc</color>
+    <color name="greyToolbarStroke">#c2c2c4</color>
+    <color name="greyStandartText">#8e8e93</color>
+    <color name="greyAlter">#89898e</color>
+    <color name="greySeekbar">#c5c5ca</color>
+    <color name="greyChooseBack">#f6f6f6</color>
+    <color name="greyDateBack">#e7e6e6</color>
+    <color name="greyMenuLoginBack">#f4f4f5</color>
+    <color name="greyMenuText">#aab9c7</color>
+    <color name="greyText">#b2b2b2</color>
+    <color name="orange">#ff7542</color>
+    <color name="red">#ff3b3b</color>
+    <color name="redReg">#f93830</color>
+    <color name="redTestCard">#ef332f</color>
+    <color name="redUnderline">#ff4e5c</color>
+    <color name="redBackForProf">#b4040b</color>
+    <color name="redToolbar">#e2302c</color>
+    <color name="redDate">#ed332e</color>
+    <color name="redProfile">#a70307</color>
+    <color name="redBlack">#931c1f</color>
+    <color name="redProfLBack">#c8252a</color>
+    <color name="redEdittext">#b62126</color>
+    <color name="redStroke">#91181f</color>
+    <color name="redMenuItem">#fd3a30</color>
+    <color name="redToolbarText">#d7272e</color>
+    <color name="redToolbarBack">#a71926</color>
+    <color name="redTop">#b71833</color>
+    <color name="redBack">#ad122c</color>
+    <color name="redText">#bb363e</color>
+    <color name="redText2">#b61823</color>
+    <color name="green">#46b749</color>
+    <color name="greenBack">#009650</color>
+    <color name="piggyButton">#d68996</color>
+    <color name="purple">#f7d4d5</color>
+    <color name="purple2">#fae4e5</color>
+
+
+    <color name="status1">#d7272e</color>
+    <color name="status2">#f6f6f6</color>
+    <color name="status3">#fef9ed</color>
+</resources>
