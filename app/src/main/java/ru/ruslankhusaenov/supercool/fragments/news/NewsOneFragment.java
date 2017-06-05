@@ -1,13 +1,10 @@
 package ru.ruslankhusaenov.supercool.fragments.news;
 
-import android.content.res.Resources;
-import android.graphics.Point;
+
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.text.Html;
-import android.util.TypedValue;
-import android.view.Display;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

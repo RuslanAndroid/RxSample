@@ -5,15 +5,16 @@ import android.content.Context;
 import com.fernandocejas.frodo.annotation.RxLogObservable;
 
 
-import java.util.ArrayList;
+
 import java.util.List;
+
+
 
 import ru.ruslankhusaenov.supercool.models.NewsItem;
 import ru.ruslankhusaenov.supercool.models.NewsList;
 
 import rx.Observable;
-import rx.functions.Action1;
-import rx.functions.Func1;
+
 import rx.schedulers.Schedulers;
 
 public class DomainService {
@@ -24,9 +25,11 @@ public class DomainService {
     public final static String NEWS_LIST_KEY    = "NEWS_LIST";
     public final static String NEWS_ONE_KEY     = "NEWS_ONE";
 
+
+
     public DomainService( NetworkAPI API , Context context) {
         this.mAPI = API;
-        mDiskRepository = new DiskRepository(context); // TODO: Inject Singleton
+        mDiskRepository = new DiskRepository(context);
     }
 
     @RxLogObservable

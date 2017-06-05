@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:orientation="vertical"
-                android:background="@color/greyChooseBack"
+                android:background="@color/grey"
 
                 android:clickable="true"
                 android:layout_width="match_parent"
@@ -33,7 +32,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15dp"
-                    android:textColor="@color/redToolbarText"
+                    android:textColor="@color/red"
                     android:id="@+id/news_one_date"/>
             </RelativeLayout>
 
@@ -86,7 +85,7 @@
         android:visibility="gone"
         android:fitsSystemWindows="true"
         android:id="@+id/progressFrame"
-        android:background="@color/greyChooseBack"
+        android:background="@color/grey"
         android:clickable="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent">

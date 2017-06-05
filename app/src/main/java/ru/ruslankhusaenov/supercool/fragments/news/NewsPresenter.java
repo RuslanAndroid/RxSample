@@ -3,7 +3,6 @@ package ru.ruslankhusaenov.supercool.fragments.news;
 
 
 
-import ru.ruslankhusaenov.supercool.R;
 import ru.ruslankhusaenov.supercool.models.NewsItem;
 import ru.ruslankhusaenov.supercool.repository.DomainService;
 import ru.ruslankhusaenov.supercool.util.NetworkError;

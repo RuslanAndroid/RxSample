@@ -18,6 +18,7 @@ public class App extends Application {
         super.onCreate();
         deps = DaggerDeps.builder()
                 .networkRepository(new NetworkRepository(getApplicationContext()))
+
                 .build();
     }
 

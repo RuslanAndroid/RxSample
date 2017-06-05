@@ -8,6 +8,7 @@ import javax.inject.Singleton;
 
 import dagger.Component;
 import ru.ruslankhusaenov.supercool.fragments.news.NewsListFragment;
+
 import ru.ruslankhusaenov.supercool.repository.NetworkRepository;
 
 /**

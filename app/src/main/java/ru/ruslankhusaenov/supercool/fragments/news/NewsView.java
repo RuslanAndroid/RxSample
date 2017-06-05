@@ -1,7 +1,6 @@
 package ru.ruslankhusaenov.supercool.fragments.news;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 import ru.ruslankhusaenov.supercool.models.NewsItem;

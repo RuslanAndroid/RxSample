@@ -20,6 +20,6 @@
         android:layout_centerInParent="true"
         android:id="@+id/progress"
         app:indicatorName="BallTrianglePathIndicator"
-        app:indicatorColor="@color/redDate"
+        app:indicatorColor="@color/red"
         />
 </RelativeLayout>

@@ -25,12 +25,7 @@
             android:layout_marginTop="10dp"/>
 
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/greyLine"
-            android:layout_below="@+id/news_text"/>
+
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -52,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
-                android:textColor="@color/redToolbarText"
+                android:textColor="@color/red"
                 android:id="@+id/news_date"
                 />
         </RelativeLayout>
